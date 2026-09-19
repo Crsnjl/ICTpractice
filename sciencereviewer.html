@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260918-05-13efa67","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/83d6dfdadcd4750a.telemetry_sdk.js" integrity="sha512-XS4Dvzp6vbagZS9vFErihvr8aO3S0tH78KWUefn06fmL4WYqryBtZj/IOLITYj7dFA4gPVvPg1W/JB1DK3uLNQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science Sprint</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Work+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#10213b;--paper:#f8f6ef;--panel:#ffffff;--panel-strong:#edf8fa;--muted:#506a86;
+      --line:#cfdee8;--cyan:#16bfd2;--violet:#7357d8;--green:#20a66b;--amber:#d99416;--danger:#d64e5d;
+      --shadow:0 16px 45px rgba(21,47,76,.12);
+    }
+    body.dark{
+      --ink:#f2f8ff;--paper:#061224;--panel:#10243a;--panel-strong:#142f49;--muted:#b4c9da;
+      --line:#31536f;--cyan:#55e0ec;--violet:#b7a5ff;--green:#69e2aa;--amber:#ffd174;--danger:#ff91a0;
+      --shadow:0 20px 55px rgba(0,0,0,.42);
+    }
+    *{box-sizing:border-box}
+    html{font-size:18px}
+    body{margin:0;width:100%;min-height:100%;font-family:"Work Sans",sans-serif;font-size:1rem;line-height:1.55;color:var(--ink);background:var(--paper);transition:background .3s,color .3s}
+    body::before,body::after{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none}
+    body::before{
+      opacity:.62;background:
+      radial-gradient(circle at 15% 12%,rgba(22,191,210,.18),transparent 25%),
+      radial-gradient(circle at 83% 78%,rgba(115,87,216,.14),transparent 30%),
+      linear-gradient(rgba(22,191,210,.08) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(22,191,210,.08) 1px,transparent 1px);
+      background-size:auto,auto,34px 34px,34px 34px;
+      animation:gridDrift 24s ease-in-out infinite alternate;
+    }
+    body::after{
+      opacity:.72;
+      background:
+        radial-gradient(circle at 10% 34%,var(--cyan) 0 2px,transparent 3px),
+        radial-gradient(circle at 88% 20%,var(--violet) 0 2px,transparent 3px),
+        radial-gradient(circle at 74% 88%,var(--green) 0 2px,transparent 3px),
+        radial-gradient(circle at 33% 83%,var(--amber) 0 2px,transparent 3px);
+      animation:starDrift 18s ease-in-out infinite alternate;
+    }
+    body.dark::before{opacity:.82;background:
+      radial-gradient(circle at 18% 10%,rgba(85,224,236,.18),transparent 28%),
+      radial-gradient(circle at 82% 78%,rgba(183,165,255,.21),transparent 34%),
+      linear-gradient(rgba(140,210,255,.09) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(140,210,255,.09) 1px,transparent 1px);
+      background-size:auto,auto,38px 38px,38px 38px}
+    @keyframes gridDrift{from{background-position:0 0,0 0,0 0,0 0}to{background-position:22px -14px,-24px 20px,18px 20px,18px 20px}}
+    @keyframes starDrift{from{transform:translate3d(0,0,0);opacity:.5}to{transform:translate3d(0,-12px,0);opacity:.8}}
+    @keyframes orbit{to{transform:rotate(360deg)}}
+    @keyframes glow{0%,100%{opacity:.35;transform:scale(.95)}50%{opacity:.8;transform:scale(1.05)}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+    .app-shell{width:100%;min-height:calc(100 * min(var(--vh,1vh),1vh));position:relative;overflow:hidden}
+    .page-width{width:100%;max-width:1180px;margin:0 auto;padding:1.25rem}
+    .brand-font{font-family:"Fraunces",serif}
+    .panel{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:1.4rem;color:var(--ink)}
+    .hero-panel{background:linear-gradient(135deg,var(--panel),var(--panel-strong));position:relative}
+    .orbit{position:absolute;border:1px solid color-mix(in srgb,var(--cyan) 48%,transparent);border-radius:50%;pointer-events:none;animation:orbit 32s linear infinite}
+    .orbit::after{content:"";position:absolute;width:.55rem;height:.55rem;background:var(--violet);box-shadow:0 0 16px var(--violet);border-radius:50%;top:13%;left:13%;animation:glow 3s ease-in-out infinite}
+    .molecule{position:absolute;width:.6rem;height:.6rem;border-radius:50%;background:var(--green);box-shadow:0 0 16px color-mix(in srgb,var(--green) 80%,transparent);pointer-events:none;animation:glow 4s ease-in-out infinite}
+    .branch-grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:1rem}
+    @media(min-width:620px){.branch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(min-width:900px){.branch-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(min-width:1120px){.branch-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+    .branch-card{height:100%;min-height:178px;display:flex;flex-direction:column;align-items:flex-start;position:relative;overflow:hidden;text-align:left;padding:1.1rem;background:var(--panel);border:2px solid var(--line);border-radius:1.15rem;color:var(--ink);transition:transform .18s,border-color .18s,box-shadow .18s;cursor:pointer}
+    .branch-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+    .branch-card.selected{border-color:var(--branch);box-shadow:0 0 0 4px color-mix(in srgb,var(--branch) 18%,transparent)}
+    .branch-card.selected::after{content:"✓ Selected";position:absolute;right:.75rem;top:.75rem;background:var(--branch);color:#061224;font-weight:800;font-size:.75rem;padding:.3rem .5rem;border-radius:999px}
+    .branch-icon{width:2.75rem;height:2.75rem;display:grid;place-items:center;border-radius:.82rem;background:color-mix(in srgb,var(--branch) 18%,transparent);color:var(--branch);font-size:1.35rem}
+    .branch-count{margin-top:auto;padding-top:.65rem;color:var(--muted);font-size:.92rem}
+    .btn{min-height:3.15rem;display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border-radius:.85rem;padding:.72rem 1.05rem;font-weight:800;border:1px solid var(--line);transition:transform .15s,filter .15s;cursor:pointer}
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+    .btn:disabled{cursor:not-allowed;opacity:.55;transform:none}
+    .btn-primary{background:var(--cyan);color:#062137;border-color:var(--cyan)}
+    .btn-secondary{background:var(--panel);color:var(--ink)}
+    .btn-danger{background:var(--danger);color:#fff;border-color:var(--danger)}
+    .answer{width:100%;text-align:left;display:flex;align-items:flex-start;gap:.9rem;padding:1.1rem;border:2px solid var(--line);background:var(--panel);color:var(--ink);border-radius:1rem;font-size:1.03rem;font-weight:600;line-height:1.45;transition:border-color .15s,background .15s,transform .15s}
+    .answer:hover:not(:disabled){border-color:var(--cyan);transform:translateX(3px)}
+    .answer:disabled{cursor:default}.answer.correct{border-color:var(--green);background:color-mix(in srgb,var(--green) 15%,var(--panel))}.answer.incorrect{border-color:var(--danger);background:color-mix(in srgb,var(--danger) 13%,var(--panel))}
+    .answer-key{flex:0 0 1.95rem;height:1.95rem;display:grid;place-items:center;border-radius:50%;background:color-mix(in srgb,var(--cyan) 17%,var(--panel));color:var(--ink);font-size:.86rem}
+    .progress-track{height:.8rem;border-radius:999px;overflow:hidden;background:color-mix(in srgb,var(--line) 82%,transparent)}.progress-fill{height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--cyan),var(--violet));transition:width .3s ease}
+    .badge{display:inline-flex;align-items:center;gap:.35rem;border-radius:999px;padding:.4rem .7rem;font-size:.84rem;font-weight:800;border:1px solid var(--line);background:color-mix(in srgb,var(--panel) 82%,transparent);color:var(--ink)}
+    .hidden-view{display:none!important}.toast{min-height:1.5rem;color:var(--danger);font-weight:600}.modal-backdrop{background:rgba(3,12,25,.72);backdrop-filter:blur(5px)}.focus-ring:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}.review-item{border-left:4px solid var(--danger);background:color-mix(in srgb,var(--danger) 6%,var(--panel))}
+    .metric-card{background:var(--panel);border-color:var(--line);color:var(--ink)}
+    .result-banner{background:linear-gradient(135deg,#0c2540,#172d58);color:#f4faff}
+    body.dark .result-banner{background:linear-gradient(135deg,#071323,#15265b)}
+    @media(max-width:640px){html{font-size:17px}.page-width{padding:.9rem}.branch-card{min-height:160px}.hero-title-size{font-size:2.25rem!important}.question-size{font-size:1.7rem!important}}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/8de366929c5f3b48.data_sdk.js" type="text/javascript" integrity="sha512-TyQ8k8cZj66xe/aENmn6RyZpdOFZXbAo5+KBG3PeFM+Q4qMTHU8xAqmq4ADClNfPrstgQYV6OzZHwLTnElzB2g=="></script>
+  <script src="/_sdk/0ddbbee1c66b1212.editing_sdk.js" type="text/javascript" integrity="sha512-HQn5LM1yruQSbY78ATUril6QeOJ9xj7KqO64ltLtb4vBwI5Qv3/tloFFOndBPZTNZoeV5xKzuth5y6FTi9crsg=="></script>
+  <script src="/_sdk/765e1fea0cec97ce.resizing_sdk.js" type="text/javascript" integrity="sha512-IRTJnqww0+HQ5V/LlWEQrlD5SrYHaVvaeVoNe8HYQXoaguzUGheSd9+n9s6WOgaTcEH0g37DuINHZ9aqfzWjlw=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(248, 246, 239);">
+  <div class="app-shell">
+   <header class="page-width flex flex-wrap items-center justify-between gap-4"><button id="brandHome" type="button" class="focus-ring flex items-center gap-3 text-left" aria-label="Return to Science Sprint home"> <span class="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-400 text-slate-950"><i data-lucide="flask-conical"></i></span> <span><span data-template-id="brand-name" class="canva-text brand-font block font-bold" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 24px;">Science Sprint</span><span data-template-id="brand-tagline" class="canva-text block text-sm font-semibold" style="color: rgb(80, 106, 134); font-weight: 600; font-style: normal; font-size: 15px;">Learn. Test. Discover.</span></span> </button>
+    <nav class="flex overflow-hidden rounded-xl border" style="border-color:var(--line)" aria-label="Theme controls"><button id="lightBtn" type="button" class="btn focus-ring rounded-none border-0 px-4" aria-pressed="true"><i data-lucide="sun"></i><span data-template-id="light-label" class="canva-text" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 18px;">Light</span></button> <button id="darkBtn" type="button" class="btn focus-ring rounded-none border-0 px-4" aria-pressed="false"><i data-lucide="moon"></i><span data-template-id="dark-label" class="canva-text" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 18px;">Dark</span></button>
+    </nav>
+   </header>
+   <main class="page-width pb-12">
+    <section id="homeView">
+     <section class="panel hero-panel overflow-hidden px-6 py-10 sm:px-12 sm:py-14"><span class="orbit -right-20 -top-24 h-72 w-72"></span><span class="orbit -bottom-28 -left-20 h-64 w-64" style="animation-direction:reverse"></span> <span class="molecule right-24 top-28"></span><span class="molecule bottom-14 right-44" style="animation-delay:1.4s"></span>
+      <div class="relative max-w-3xl">
+       <div data-template-id="hero-kicker" class="canva-tag badge mb-5" style="background: rgb(229, 251, 253); color: rgb(11, 101, 112); font-weight: 700; font-style: normal; font-size: 18px;">A science review game</div>
+       <h1 data-template-id="hero-title" class="canva-text hero-title-size brand-font mb-5 font-bold leading-tight" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 46px; line-height: 1.12;">Build momentum. Master science.</h1>
+       <p data-template-id="hero-copy" class="canva-text max-w-2xl leading-relaxed" style="color: rgb(80, 106, 134); font-weight: 400; font-style: normal; font-size: 19px; line-height: 1.55;">Choose the science branches you want to review, then complete every question in your personalized Science Sprint.</p>
+      </div>
+     </section>
+     <section class="mt-8">
+      <div class="mb-5 flex flex-wrap items-end justify-between gap-4">
+       <div>
+        <h2 data-template-id="branch-heading" class="canva-text brand-font font-bold" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 30px;">Choose your science set</h2>
+        <p data-template-id="branch-help" class="canva-text mt-2" style="color: rgb(80, 106, 134); font-weight: 400; font-style: normal; font-size: 18px;">Each selected branch contributes 100 questions. Mix branches for a bigger challenge.</p>
+       </div>
+       <aside class="panel px-5 py-3 text-right">
+        <span class="block text-sm font-bold uppercase tracking-wider" style="color:var(--muted)">Selected set</span><span id="questionTotal" class="text-2xl font-extrabold" aria-live="polite">0 questions</span>
+       </aside>
+      </div>
+      <div id="branchGrid" class="branch-grid"></div>
+      <p id="selectionMessage" class="toast mt-4" role="status"></p>
+      <div class="mt-6 flex flex-wrap items-center gap-3"><button id="startBtn" type="button" data-template-id="start-button" class="canva-button btn btn-primary focus-ring" style="background: rgb(22, 191, 210); color: rgb(6, 33, 55); font-weight: 800;"><i data-lucide="rocket"></i><span data-template-id="start-button-label" class="canva-text" style="color: rgb(6, 33, 55); font-weight: 800; font-style: normal; font-size: 18px;">Start Quiz</span></button> <button id="clearSavedBtn" type="button" data-template-id="clear-saved-button" class="canva-button btn btn-secondary focus-ring hidden-view" style="background: rgb(255, 255, 255); color: rgb(16, 33, 59); font-weight: 700;"><i data-lucide="trash-2"></i><span data-template-id="clear-saved-button-label" class="canva-text" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 18px;">Clear Saved Progress</span></button>
+      </div>
+     </section>
+     <section id="resumePanel" class="panel mt-8 hidden-view border-l-4 p-6" style="border-left-color:var(--violet)">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+       <div>
+        <h2 data-template-id="resume-heading" class="canva-text brand-font font-bold" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 28px;">Your Science Sprint is waiting</h2>
+        <p id="resumeInfo" class="mt-2" style="color:var(--muted)"></p>
+       </div>
+       <div class="flex flex-wrap gap-2">
+        <button id="continueBtn" type="button" data-template-id="continue-button" class="canva-button btn btn-primary focus-ring" style="background: rgb(22, 191, 210); color: rgb(6, 33, 55); font-weight: 800;"><i data-lucide="play"></i><span data-template-id="continue-button-label" class="canva-text" style="color: rgb(6, 33, 55); font-weight: 800; font-style: normal; font-size: 18px;">Continue Saved Progress</span></button><button id="newFromSavedBtn" type="button" data-template-id="new-quiz-button" class="canva-button btn btn-secondary focus-ring" style="background: rgb(255, 255, 255); color: rgb(16, 33, 59); font-weight: 700;"><i data-lucide="rotate-ccw"></i><span data-template-id="new-quiz-button-label" class="canva-text" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 18px;">Start a New Quiz</span></button>
+       </div>
+      </div>
+     </section>
+    </section>
+    <section id="quizView" class="hidden-view">
+     <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+      <button id="quizHomeBtn" type="button" data-template-id="home-button" class="canva-button btn btn-secondary focus-ring" style="background: rgb(255, 255, 255); color: rgb(16, 33, 59); font-weight: 700;"><i data-lucide="house"></i><span data-template-id="home-button-label" class="canva-text" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 18px;">Home</span></button>
+      <div class="flex flex-wrap items-center gap-2">
+       <span id="branchBadge" class="badge"></span><span id="difficultyBadge" class="badge"></span>
+      </div>
+     </div>
+     <section class="panel overflow-hidden">
+      <div class="p-6 sm:p-9">
+       <div class="mb-5 flex items-center justify-between gap-3">
+        <span id="questionCount" class="font-extrabold" aria-live="polite"></span><span id="scoreLive" class="font-bold" style="color:var(--muted)"></span>
+       </div>
+       <div class="progress-track mb-9" aria-label="Quiz progress">
+        <div id="progressFill" class="progress-fill"></div>
+       </div>
+       <h1 id="questionText" tabindex="-1" class="question-size brand-font max-w-4xl font-bold leading-snug"></h1>
+       <div id="answers" class="mt-8 grid gap-3" role="group" aria-label="Answer choices"></div>
+       <div id="feedback" class="hidden-view mt-7 rounded-2xl border p-6" role="status" aria-live="polite">
+        <div class="flex gap-3">
+         <i id="feedbackIcon" data-lucide="circle-check-big" class="mt-1 h-7 w-7 shrink-0"></i>
+         <div>
+          <h2 id="feedbackTitle" class="text-xl font-extrabold"></h2>
+          <p id="explanationText" class="mt-2 leading-relaxed"></p>
+         </div>
+        </div>
+       </div>
+       <div class="mt-7 flex justify-end">
+        <button id="nextBtn" type="button" data-template-id="next-button" class="canva-button btn btn-primary focus-ring hidden-view" style="background: rgb(22, 191, 210); color: rgb(6, 33, 55); font-weight: 800;"><span id="nextLabel"></span><i data-lucide="arrow-right"></i></button>
+       </div>
+      </div>
+     </section>
+    </section>
+    <section id="resultsView" class="hidden-view">
+     <section class="panel overflow-hidden">
+      <div class="result-banner px-7 py-10 sm:px-11">
+       <p data-template-id="results-kicker" class="canva-text font-bold uppercase tracking-widest" style="color: rgb(154, 233, 240); font-weight: 800; font-style: normal; font-size: 16px;">Sprint complete</p>
+       <h1 data-template-id="results-title" class="canva-text brand-font mt-2 font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 40px;">Your Science Report</h1>
+       <div class="mt-7 flex flex-wrap items-end gap-5">
+        <span id="percentResult" class="brand-font text-6xl font-bold text-cyan-300"></span><span id="scoreResult" class="pb-2 text-xl font-semibold text-slate-100"></span>
+       </div>
+      </div>
+      <div class="p-6 sm:p-9">
+       <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div class="metric-card rounded-xl border p-4">
+         <span class="block" style="color:var(--muted)">Correct</span><strong id="correctResult" class="text-3xl" style="color:var(--green)"></strong>
+        </div>
+        <div class="metric-card rounded-xl border p-4">
+         <span class="block" style="color:var(--muted)">Incorrect</span><strong id="incorrectResult" class="text-3xl" style="color:var(--danger)"></strong>
+        </div>
+        <div class="metric-card rounded-xl border p-4">
+         <span class="block" style="color:var(--muted)">Answered</span><strong id="answeredResult" class="text-3xl"></strong>
+        </div>
+        <div class="metric-card rounded-xl border p-4">
+         <span class="block" style="color:var(--muted)">Branches</span><strong id="branchesResult" class="text-3xl"></strong>
+        </div>
+       </div>
+       <h2 data-template-id="breakdown-heading" class="canva-text brand-font mt-9 font-bold" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 30px;">Branch breakdown</h2>
+       <div id="breakdownList" class="mt-4 grid gap-3 sm:grid-cols-2"></div>
+       <div class="mt-9 flex flex-wrap gap-3">
+        <button id="reviewBtn" type="button" data-template-id="review-button" class="canva-button btn btn-secondary focus-ring" style="background: rgb(255, 255, 255); color: rgb(16, 33, 59); font-weight: 700;"><i data-lucide="clipboard-list"></i><span data-template-id="review-button-label" class="canva-text" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 18px;">Review Missed Questions</span></button><button id="restartBtn" type="button" data-template-id="restart-button" class="canva-button btn btn-primary focus-ring" style="background: rgb(22, 191, 210); color: rgb(6, 33, 55); font-weight: 800;"><i data-lucide="rotate-ccw"></i><span data-template-id="restart-button-label" class="canva-text" style="color: rgb(6, 33, 55); font-weight: 800; font-style: normal; font-size: 18px;">Restart Quiz</span></button><button id="resultsHomeBtn" type="button" data-template-id="results-home-button" class="canva-button btn btn-secondary focus-ring" style="background: rgb(255, 255, 255); color: rgb(16, 33, 59); font-weight: 700;"><i data-lucide="house"></i><span data-template-id="results-home-button-label" class="canva-text" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 18px;">Home</span></button>
+       </div>
+       <section id="reviewSection" class="hidden-view mt-9">
+        <h2 data-template-id="missed-heading" class="canva-text brand-font font-bold" style="color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 30px;">Review missed questions</h2>
+        <div id="missedList" class="mt-4 grid gap-4"></div>
+       </section>
+      </div>
+     </section>
+    </section>
+   </main>
+  </div>
+  <div id="modal" class="modal-backdrop hidden-view fixed inset-0 z-50 grid place-items-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+   <div class="panel w-full max-w-md p-7">
+    <h2 id="modalTitle" class="brand-font text-3xl font-bold"></h2>
+    <p id="modalText" class="mt-3 leading-relaxed" style="color:var(--muted)"></p>
+    <div class="mt-7 flex justify-end gap-3">
+     <button id="modalCancel" type="button" data-template-id="cancel-button" class="canva-button btn btn-secondary focus-ring" style="background: rgb(255, 255, 255); color: rgb(16, 33, 59); font-weight: 700; font-style: normal; font-size: 18px;">Cancel</button><button id="modalConfirm" type="button" data-template-id="confirm-button" class="canva-button btn btn-danger focus-ring" style="background: rgb(214, 78, 93); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">Yes, continue</button>
+    </div>
+   </div>
+  </div>
+  <template id="branchTemplate">
+   <button type="button" class="branch-card focus-ring" aria-pressed="false"><span class="branch-icon"></span><span class="mt-4 text-xl font-extrabold"></span><span class="branch-count"></span></button>
+  </template>
+  <script>
+    const simpleBranches={
+      physics:{name:"Physics",icon:"⚛",color:"#16bfd2",topics:[["What is the SI unit of force?","newton","joule","watt","pascal","Easy","A newton is the SI unit used to measure force."],["Which quantity has magnitude and direction?","velocity","speed","mass","temperature","Easy","Velocity includes both speed and direction."],["What force pulls objects toward Earth?","gravity","friction","magnetism","tension","Easy","Gravity attracts masses toward one another."],["What happens to light entering water from air?","it refracts","it evaporates","it becomes sound","it stops","Medium","Refraction is the bending of light as its speed changes."]]},
+      chemistry:{name:"Chemistry",icon:"🧪",color:"#7357d8",topics:[["What is the smallest unit of an element?","atom","cell","compound","mixture","Easy","An atom retains the properties of an element."],["Which particle has a positive charge?","proton","electron","neutron","photon","Easy","Protons have a positive electrical charge."],["What does pH measure?","acidity or basicity","mass","density","radioactivity","Easy","The pH scale describes acidity and basicity."],["A reaction that releases heat is","exothermic","endothermic","neutral","reversible only","Medium","Exothermic reactions release energy as heat."]]},
+      biology:{name:"Biology",icon:"🧬",color:"#20a66b",topics:[["What is the basic unit of life?","cell","atom","tissue","organism","Easy","Cells are the smallest units that carry out life processes."],["Plants make sugar using sunlight by","photosynthesis","respiration","digestion","fermentation","Easy","Photosynthesis captures light energy to make sugars."],["What molecule carries genetic instructions?","DNA","ATP","water","glucose","Easy","DNA stores hereditary information."],["Which process produces gametes?","meiosis","mitosis","diffusion","osmosis","Hard","Meiosis produces cells with half the usual chromosome number."]]},
+      astronomy:{name:"Astronomy",icon:"✦",color:"#e8a62b",topics:[["What star is at the center of our solar system?","the Sun","Polaris","Sirius","Betelgeuse","Easy","The Sun is our solar system's central star."],["What causes day and night on Earth?","Earth's rotation","Earth's revolution","the Moon's orbit","solar flares","Easy","Earth rotates once roughly every 24 hours."],["What force keeps planets in orbit?","gravity","friction","electricity","buoyancy","Easy","Gravity bends the paths of orbiting objects."],["What is a light-year?","a distance light travels in a year","the age of a star","one Earth year","a brightness unit","Medium","A light-year is a unit of distance."]]},
+      earth:{name:"Earth Science",icon:"🌍",color:"#2596d1",topics:[["What layer forms Earth's rocky outer surface?","crust","outer core","inner core","mantle only","Easy","Earth's crust is its thin outer rocky layer."],["What instrument records earthquakes?","seismograph","thermometer","anemometer","hygrometer","Easy","A seismograph records ground motion."],["What rock forms when magma cools?","igneous rock","sedimentary rock","metamorphic rock","fossil rock","Easy","Igneous rock solidifies from molten material."],["What drives plate tectonics?","mantle convection","ocean tides alone","sunlight","wind erosion","Hard","Heat-driven mantle movement helps move plates."]]},
+      environmental:{name:"Environmental Science",icon:"♻",color:"#6caf4f",topics:[["What describes the variety of life in an area?","biodiversity","pollution","erosion","urbanization","Easy","Biodiversity includes variety among organisms and ecosystems."],["Which gas is a major greenhouse gas?","carbon dioxide","oxygen","nitrogen","helium","Easy","Carbon dioxide absorbs outgoing infrared energy."],["What do decomposers do?","break down dead material","make sunlight","hunt prey","create rocks","Easy","Decomposers recycle nutrients."],["What often causes eutrophication?","excess nutrients in water","low gravity","volcanic glass","moonlight","Hard","Extra nutrients can trigger algal blooms and oxygen loss."]]}
+    };
+    const nicheRows=[
+      ["A protein that speeds up a chemical reaction is a","biological catalyst","mineral crystal","fossil fuel","tectonic plate","Easy","Enzymes are proteins that act as biological catalysts."],
+      ["Biophysics applies physics tools mainly to study","living systems","only stars","only rocks","only weather maps","Easy","Biophysics examines life using physical principles."],
+      ["Diffusion moves particles overall from","higher to lower concentration","lower to higher concentration","cold to hot only","inside to outside only","Easy","Random motion creates net movement down a concentration gradient."],
+      ["Osmosis is diffusion of","water across a selectively permeable membrane","electrons through a wire","rocks downhill","sound through air","Medium","Osmosis specifically describes water movement through a membrane."],
+      ["Why can some insects walk on water?","surface tension supports them","water is magnetic","their legs make ice","gravity stops acting","Medium","Cohesive water molecules create surface tension."],
+      ["A whale's streamlined body mainly reduces","fluid drag","gravity","radioactivity","salinity","Easy","A streamlined shape reduces resistance while moving through water."],
+      ["The study of chemical cycles between rocks, water, air, and life is","geochemistry","taxonomy","optics","anatomy","Medium","Geochemistry studies chemical processes in Earth systems."],
+      ["Which process removes carbon dioxide from rainwater and can dissolve limestone?","chemical weathering","nuclear fusion","photosynthesis","freezing","Medium","Carbonic acid in rain reacts with carbonate rock."],
+      ["A mineral is identified partly by its","crystal structure and composition","city of discovery only","color alone","age alone","Medium","Minerals have characteristic composition and ordered crystal structure."],
+      ["The most abundant dissolved salt ion in seawater is","chloride","gold","silicon","phosphate","Medium","Chloride is the most abundant anion in seawater."],
+      ["Ocean acidification happens when seawater absorbs more","carbon dioxide","nitrogen gas","helium","oxygen only","Easy","Dissolved carbon dioxide forms acids that lower seawater pH."],
+      ["Corals build skeletons primarily from","calcium carbonate","sodium chloride","pure carbon","iron oxide","Medium","Many corals precipitate calcium carbonate skeletons."],
+      ["Hydrothermal vents are often found near","mid-ocean ridges","desert dunes","glacier centers","river deltas","Medium","Seafloor spreading zones commonly host hydrothermal vents."],
+      ["Chemosynthesis uses energy from","chemical reactions","moonlight","wind only","sound waves","Medium","Some organisms make food using energy from inorganic chemical reactions."],
+      ["Astrobiology investigates","life in the universe","only asteroid mining","weather forecasts","human history","Easy","Astrobiology studies life's origins, evolution, and possible distribution beyond Earth."],
+      ["A biosignature is evidence that may indicate","past or present life","only volcanic activity","a planet's mass","a telescope error","Medium","Biosignatures are features that could be produced by life."],
+      ["Why is liquid water important in many life-search missions?","it is an effective solvent for chemistry","it blocks all radiation","it has no mass","it creates gravity","Medium","Water supports many chemical reactions needed by known life."],
+      ["An extremophile is an organism adapted to","extreme conditions","only forests","only daylight","ordinary room temperature only","Easy","Extremophiles survive conditions that are harsh for many organisms."],
+      ["Tardigrades are studied partly because some can survive","very harsh environmental stress","only ocean currents","only magnetic fields","without cells","Medium","Some tardigrades tolerate drying, cold, and radiation unusually well."],
+      ["Mars missions look for ancient lake sediments because they may preserve","evidence of past habitable environments","modern trees","Earth's oceans","solar flares","Medium","Sediments can preserve minerals and possible signs of ancient water and life."],
+      ["A planet in a star's habitable zone may have temperatures that allow","liquid water on its surface","only liquid iron","no atmosphere","no gravity","Medium","The habitable zone is a temperature-based starting point for liquid-water potential."],
+      ["Exoplanets are planets that orbit","stars other than the Sun","Earth only","the Moon only","asteroids only","Easy","An exoplanet is outside our solar system."],
+      ["The transit method finds an exoplanet when it","slightly dims its star","hits a telescope","changes into a comet","stops orbiting","Medium","A planet crossing its star blocks a tiny amount of starlight."],
+      ["Atmospheric spectroscopy can reveal a planet's","gas composition","number of continents directly","exact population","interior fossils directly","Hard","Gases absorb and emit particular wavelengths of light."],
+      ["The greenhouse effect warms a planet because certain gases","absorb outgoing infrared radiation","remove all sunlight","eliminate gravity","turn oxygen into rock","Medium","Greenhouse gases absorb and re-emit thermal infrared energy."],
+      ["The ozone layer is concentrated in the","stratosphere","inner core","mantle","ocean floor","Medium","Most atmospheric ozone is in the stratosphere."],
+      ["Stratospheric ozone protects life by absorbing much","ultraviolet radiation","visible green light","radio waves","sound energy","Medium","Ozone absorbs harmful UV radiation from the Sun."],
+      ["Auroras form when charged particles interact with","a planet's magnetic field and upper atmosphere","only clouds","ocean currents","tectonic plates","Medium","Magnetic fields guide charged particles into the upper atmosphere."],
+      ["Why does the sky appear blue on a clear day?","air molecules scatter shorter wavelengths more","oceans reflect upward","the Sun emits only blue light","clouds absorb red light","Hard","Rayleigh scattering preferentially scatters shorter visible wavelengths."],
+      ["A temperature inversion can trap pollution because","warm air sits above cooler surface air","all wind stops forever","rain becomes acidic instantly","ozone disappears","Hard","The warm layer inhibits vertical mixing of air."],
+      ["The Coriolis effect results from","Earth's rotation","Earth's magnetic field alone","the Moon's light","mountain erosion","Medium","Rotation makes moving air and water appear deflected over large distances."],
+      ["El Niño involves unusual warming of surface waters in the","central and eastern tropical Pacific","Arctic Ocean only","Mediterranean Sea","Indian Ocean only","Medium","El Niño changes tropical Pacific ocean-atmosphere patterns."],
+      ["Aerosols can cool climate when they","reflect sunlight back to space","create extra gravity","remove all clouds","stop ocean tides","Medium","Reflective particles reduce incoming solar energy at the surface."],
+      ["Planetary geology compares landforms on","planets, moons, and smaller bodies","only Earth cities","only living cells","only clouds","Easy","Planetary geologists study solid surfaces throughout the solar system."],
+      ["The dark volcanic plains on the Moon are called","maria","fjords","deltas","reefs","Medium","Lunar maria are basaltic plains formed by ancient lava flows."],
+      ["Olympus Mons is a giant volcano on","Mars","Venus","Mercury","Earth's Moon","Easy","Olympus Mons on Mars is the solar system's largest known volcano."],
+      ["Why are impact craters useful for estimating surface age?","older surfaces usually have more craters","craters create life","young surfaces attract meteors","all craters disappear quickly","Hard","Without resurfacing, impacts accumulate over time."],
+      ["Ice can shape a moon's surface through","cryovolcanism","photosynthesis","combustion","cell division","Hard","Cryovolcanism involves eruptions of volatile materials such as water or ammonia."],
+      ["Europa is a target in life searches because it likely has","an ocean beneath its ice","a dense forest","liquid lava oceans at the surface","no water at all","Medium","Evidence suggests Jupiter's moon Europa contains a subsurface ocean."],
+      ["Titan's lakes are mainly filled with","liquid methane and ethane","liquid iron","fresh water","molten sulfur only","Hard","Titan is cold enough for hydrocarbons to be liquid at its surface."],
+      ["A meteorite is a space rock that","survives passage to the ground","never enters an atmosphere","orbits only Earth","is always made of ice","Easy","A meteoroid is called a meteorite if it reaches the surface."],
+      ["Radiometric dating relies on predictable","radioactive decay","weather changes","wind speed","animal migration","Medium","Radioactive isotopes decay at known rates."],
+      ["Half-life is the time required for","half of a radioactive sample to decay","a rock to melt","an orbit to finish","a cell to divide","Medium","After one half-life, about half the original unstable nuclei remain."],
+      ["Fossils are most commonly preserved in","sedimentary rock","fresh lava","pure metal","moving glacier ice only","Easy","Sediments can bury and preserve remains or traces."],
+      ["Paleobiology combines biology with the study of","ancient life","modern electronics","only weather","only astronomy","Easy","Paleobiology investigates life of the geologic past."],
+      ["Trace fossils include","footprints and burrows","only bones","only leaves","only crystals","Medium","Trace fossils record an organism's activity rather than its body."],
+      ["Mass extinctions are recognized by","rapid widespread loss of biodiversity","one animal moving regions","daily weather changes","a single new species","Medium","They involve unusually large losses across many groups."],
+      ["The fossil record is incomplete largely because fossilization is","rare and condition-dependent","instant for all organisms","limited to mammals","impossible in oceans","Medium","Most organisms decay before conditions preserve them."],
+      ["Genomics studies an organism's","complete genetic material","weather patterns","rock layers","orbital speed","Easy","A genome is an organism's complete DNA content."],
+      ["Bioinformatics uses computing to analyze","biological data","only telescope images","only road maps","only music files","Easy","Bioinformatics applies computational methods to biological datasets."],
+      ["A DNA sequence is written using the bases","A, T, C, and G","A, B, C, and D","Na, Cl, K, and Ca","X, Y, Z, and Q","Easy","DNA uses adenine, thymine, cytosine, and guanine."],
+      ["In DNA, adenine commonly pairs with","thymine","cytosine","guanine only","uracil","Easy","A pairs with T in standard DNA base pairing."],
+      ["A mutation is a change in","genetic sequence","gravity","planetary orbit","the pH scale","Easy","Mutations are alterations in DNA sequence."],
+      ["Natural selection acts on traits that are","heritable and affect reproductive success","chosen by rocks","always harmful","unrelated to survival","Hard","Heritable trait differences can influence reproductive success."],
+      ["A phylogenetic tree represents hypotheses about","evolutionary relationships","daily temperatures","only food chains","rock hardness","Medium","Phylogenetic trees model relatedness based on evidence."],
+      ["A model in science is useful because it","simplifies systems to test ideas","guarantees every answer","replaces evidence","cannot be revised","Medium","Models help explain and predict while remaining open to improvement."],
+      ["A computer simulation of climate must include","physical processes and observations for testing","only random colors","no assumptions","only one temperature reading","Hard","Climate models represent physical processes and are evaluated against observations."],
+      ["Machine learning can help biologists classify","patterns in large datasets","only planets by color","all ideas as facts","rocks without measurements","Medium","Machine learning can identify patterns in images, sequences, and other data."],
+      ["A control group in an experiment provides","a comparison baseline","the expected answer","extra variables","a way to avoid measuring","Easy","Controls help isolate the effect of the tested variable."],
+      ["Correlation alone does not prove","causation","measurement","temperature","repetition","Medium","Two variables can change together without one causing the other."],
+      ["Ocean currents transport heat and help influence","regional climate","atomic number","cell division only","the Moon's phases","Medium","Moving seawater redistributes heat around the planet."],
+      ["Upwelling brings to the surface water that is often","cold and nutrient-rich","hot and salt-free","free of organisms","made of lava","Medium","Deep water commonly contains nutrients from decomposition."],
+      ["Phytoplankton are important because many perform","photosynthesis","plate tectonics","nuclear fission","rock weathering only","Easy","Photosynthetic plankton form the base of many marine food webs."],
+      ["The biological pump moves carbon toward the deep ocean through","sinking organic material","only ocean waves","magnetic fields","solar wind","Hard","Organic particles can transport carbon from surface waters downward."],
+      ["Salinity is a measure of","dissolved salts in water","water color","wind speed","rock age","Easy","Salinity describes the amount of dissolved salts."],
+      ["Thermohaline circulation is driven by differences in","temperature and salinity","sunlight and moonlight","soil and roots","clouds and dust only","Hard","Temperature and salinity affect seawater density and circulation."],
+      ["Density differences make colder, saltier seawater tend to","sink","always evaporate","become lighter","turn into freshwater","Medium","Cold and salty water is generally denser."],
+      ["A watershed is land that drains to","a common body of water","only a mountain summit","the outer atmosphere","a single tree","Easy","Water in a watershed flows toward a shared outlet."],
+      ["Biogeochemistry studies how elements move through","living and nonliving systems","only laboratories","only galaxies","only machines","Medium","It tracks cycling among organisms, soils, rocks, water, and air."],
+      ["Nitrogen-fixing bacteria convert atmospheric nitrogen into","forms organisms can use","pure oxygen","liquid water","carbon dioxide","Hard","Nitrogen fixation makes nitrogen available for biological use."],
+      ["The carbon cycle includes exchange between atmosphere and plants through","photosynthesis","radioactive decay only","plate collision only","lunar eclipses","Easy","Plants remove atmospheric carbon dioxide during photosynthesis."],
+      ["Methane is a strong greenhouse gas partly because it","absorbs infrared radiation","reflects all sunlight","has no molecules","stops photosynthesis","Medium","Methane absorbs outgoing thermal infrared energy."],
+      ["Permafrost thaw can affect climate by releasing","greenhouse gases","only oxygen","pure helium","no materials","Medium","Thawing can allow microbes to produce carbon dioxide and methane."],
+      ["Isotopes of an element have the same number of","protons","neutrons","electrons in every ion","chemical bonds","Medium","Isotopes share atomic number but differ in neutron number."],
+      ["Oxygen isotope ratios in ice cores can help infer","past climate conditions","future earthquakes exactly","planet locations","cell size","Hard","Isotopic ratios vary with temperature and water-cycle processes."],
+      ["Ice cores preserve ancient samples of","atmospheric gases","dinosaur DNA always","molten rock","ocean tides","Medium","Tiny bubbles trapped in ice contain old air."],
+      ["Dendrochronology studies past environments using","tree rings","meteorites","ocean trenches","cell membranes","Medium","Tree growth rings can record environmental conditions."],
+      ["Remote sensing gathers information without direct contact, often using","satellites or aircraft","only microscopes touching samples","taste tests","hand lenses only","Easy","Sensors can observe Earth from a distance."],
+      ["Satellite infrared sensors can help estimate","surface temperature","atomic mass directly","DNA sequence","fossil age exactly","Medium","Objects emit infrared radiation related to temperature."],
+      ["Lidar measures distance using","laser light","sound only","magnets","chemical dyes","Medium","Lidar uses timed laser pulses to map surfaces."],
+      ["Sonar maps seafloor depth using","sound waves","ultraviolet light","gravity alone","plant pigments","Easy","Sonar calculates distance from sound travel time."],
+      ["Seismic waves reveal Earth's interior because they","change speed and path in different materials","create oxygen","stop at every fault","only travel through air","Hard","Wave behavior depends on material properties."],
+      ["P waves can travel through","solids and liquids","only liquids","only gases","vacuum only","Medium","Primary seismic waves are compressional and move through solids and liquids."],
+      ["S waves do not travel through","liquids","solids","rocks","Earth's crust","Medium","Shear waves require materials that can resist sideways deformation."],
+      ["Earth's outer core is inferred to be liquid partly because","S waves do not pass through it","it reflects sunlight","it has no iron","it is colder than ice","Hard","The S-wave shadow zone indicates liquid behavior."],
+      ["Magnetic stripes on the seafloor support","plate tectonics","flat-Earth models","spontaneous rock growth","daily lunar phases","Hard","Symmetrical magnetic patterns record seafloor spreading."],
+      ["A subduction zone occurs where","one tectonic plate sinks beneath another","two plates only move apart","a river freezes","a cloud forms","Medium","Dense lithosphere can descend beneath another plate."],
+      ["Volcanic arcs often form above","subduction zones","stable continental interiors only","desert dunes","ice sheets only","Medium","Water released from a subducting slab helps melt mantle material."],
+      ["A planetary magnetic field can help protect an atmosphere from","solar wind stripping","all rainfall","plate movement","ocean salinity","Hard","Magnetic fields can deflect charged solar particles."],
+      ["Solar wind is a stream of","charged particles from the Sun","liquid water from the Sun","sound waves from the Sun","rocks from the Sun","Medium","The Sun releases a flow of charged particles into space."],
+      ["The heliosphere is the region influenced by","the Sun's solar wind and magnetic field","Earth's oceans","the Moon's gravity alone","Mars's atmosphere","Hard","The heliosphere is a bubble in interstellar space shaped by the solar wind."],
+      ["A comet's tail points generally","away from the Sun","toward the Sun","toward Earth always","toward its orbit path only","Medium","Solar radiation and solar wind push material away from the Sun."],
+      ["Organic molecules found in meteorites are important because they show","some building blocks of life can form in space","life definitely evolved on every asteroid","all meteorites are alive","DNA exists in every rock","Hard","They demonstrate that complex carbon compounds can form beyond Earth."],
+      ["The origin-of-life field studies how","nonliving chemistry could produce self-replicating systems","planets stop orbiting","mountains become stars","all fossils form","Hard","It investigates pathways from chemistry to early biological systems."],
+      ["RNA is considered in origin-of-life research because it can","store information and catalyze some reactions","create gravity","replace all proteins in modern cells","turn into rock","Hard","Some RNA molecules both carry information and act as catalysts."],
+      ["A feedback loop amplifies change when","an effect reinforces its cause","an effect always cancels its cause","data are ignored","a variable stays fixed","Medium","Positive feedback strengthens an initial change."],
+      ["Melting sea ice can be a positive climate feedback because it","reduces reflective surface area","makes oceans disappear","blocks all sunlight","lowers salinity to zero","Hard","Darker water absorbs more sunlight than bright ice."],
+      ["Scientific uncertainty usually means","a measured range or limited confidence","scientists know nothing","data are false","no decision is possible","Medium","Uncertainty communicates limits in measurements and models."],
+      ["Peer review is a process in which","other experts evaluate research","a computer automatically proves a claim","students copy answers","only one scientist checks data","Medium","Peer review helps assess methods, reasoning, and evidence."],
+      ["Reproducibility means a result can be","obtained again using similar methods","hidden from others","changed by opinion","measured only once","Easy","Reproducible findings strengthen confidence in research."]
+    ];
+    const BRANCHES={...simpleBranches,niche:{name:"Niche Science",icon:"🔬",color:"#d65fc8",topics:nicheRows}};
+    let dbRecord=null;
+    let app={theme:"light",active:false,completed:false,branches:[],order:[],index:0,answers:{},score:0,seed:0};
+    let pendingAction=null;
+    const seededRandom=seed=>{let v=seed>>>0;return()=>{v+=0x6D2B79F5;let t=v;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return((t^(t>>>14))>>>0)/4294967296}};
+    const shuffle=(items,seed)=>{const out=[...items],rand=seededRandom(seed);for(let i=out.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[out[i],out[j]]=[out[j],out[i]]}return out};
+    function questionFor(branch,index){
+      const b=BRANCHES[branch],base=b.topics[index%b.topics.length],cycle=Math.floor(index/b.topics.length);
+      const question=base[0];
+      const choices=shuffle([base[1],base[2],base[3],base[4]],(index+1)*173+branch.length*97);
+      return{id:`${branch}-${index}`,branch,branchName:b.name,color:b.color,question,choices,correct:choices.indexOf(base[1]),difficulty:base[5],explanation:base[6]};
+    }
+    const allSelectedQuestions=()=>app.order.map(id=>{const cut=id.lastIndexOf("-");return questionFor(id.slice(0,cut),Number(id.slice(cut+1)))});
+    const savePayload=()=>JSON.stringify(app);
+    async function persist(){if(!window.dataSdk)return;const record={saved_state:savePayload()};const result=dbRecord?await window.dataSdk.update({...dbRecord,...record}):await window.dataSdk.create(record);if(!result.isOk)document.getElementById("selectionMessage").textContent="Your changes could not be saved right now."}
+    async function removeSaved(){if(dbRecord){const result=await window.dataSdk.delete(dbRecord);if(!result.isOk)return false}dbRecord=null;return true}
+    function applyPrefs(){document.body.classList.toggle("dark",app.theme==="dark");document.getElementById("lightBtn").setAttribute("aria-pressed",String(app.theme==="light"));document.getElementById("darkBtn").setAttribute("aria-pressed",String(app.theme==="dark"))}
+    function setTheme(theme){app.theme=theme;applyPrefs();persist()}
+    function setView(view){["homeView","quizView","resultsView"].forEach(id=>document.getElementById(id).classList.toggle("hidden-view",id!==view));window.scrollTo({top:0,behavior:"smooth"})}
+    function renderBranches(){
+      const grid=document.getElementById("branchGrid");grid.innerHTML="";
+      Object.entries(BRANCHES).forEach(([key,b])=>{const node=document.getElementById("branchTemplate").content.firstElementChild.cloneNode(true),selected=app.branches.includes(key);node.style.setProperty("--branch",b.color);node.classList.toggle("selected",selected);node.setAttribute("aria-pressed",String(selected));node.querySelector(".branch-icon").textContent=b.icon;node.querySelectorAll("span")[1].textContent=b.name;node.querySelector(".branch-count").textContent="100 questions";node.addEventListener("click",()=>{if(app.active)return;app.branches=selected?app.branches.filter(x=>x!==key):[...app.branches,key];document.getElementById("selectionMessage").textContent="";renderBranches();updateHome()});grid.appendChild(node)})
+    }
+    function updateHome(){const total=app.branches.length*100,hasRun=app.active&&!app.completed;document.getElementById("questionTotal").textContent=`${total} question${total===1?"":"s"}`;document.getElementById("resumePanel").classList.toggle("hidden-view",!hasRun);document.getElementById("clearSavedBtn").classList.toggle("hidden-view",!hasRun);if(hasRun)document.getElementById("resumeInfo").textContent=`Question ${app.index+1} of ${app.order.length} · ${app.branches.map(x=>BRANCHES[x].name).join(", ")}`}
+    async function startNew(){if(!app.branches.length){document.getElementById("selectionMessage").textContent="Select at least one science branch to begin.";return}const seed=Date.now()%2147483647,ids=app.branches.flatMap(branch=>Array.from({length:100},(_,i)=>`${branch}-${i}`));app={...app,active:true,completed:false,order:shuffle(ids,seed),index:0,answers:{},score:0,seed};await persist();renderQuestion();setView("quizView")}
+    function renderQuestion(){
+      const q=allSelectedQuestions()[app.index];if(!q)return showResults();const answered=app.answers[q.id];
+      document.getElementById("questionCount").textContent=`Question ${app.index+1} of ${app.order.length}`;document.getElementById("scoreLive").textContent=`Score: ${app.score}`;document.getElementById("progressFill").style.width=`${app.index/app.order.length*100}%`;
+      const branch=document.getElementById("branchBadge");branch.textContent=q.branchName;branch.style.borderColor=q.color;branch.style.color=q.color;document.getElementById("difficultyBadge").textContent=q.difficulty;document.getElementById("questionText").textContent=q.question;
+      const answers=document.getElementById("answers");answers.innerHTML="";q.choices.forEach((choice,i)=>{const btn=document.createElement("button");btn.type="button";btn.className="answer focus-ring";const key=document.createElement("span"),text=document.createElement("span");key.className="answer-key";key.textContent=i+1;text.textContent=choice;btn.append(key,text);btn.setAttribute("aria-label",`Answer ${i+1}: ${choice}`);if(answered){btn.disabled=true;if(i===q.correct)btn.classList.add("correct");if(i===answered.choice&&!answered.correct)btn.classList.add("incorrect")}else btn.addEventListener("click",()=>answerQuestion(q,i));answers.appendChild(btn)});
+      const feedback=document.getElementById("feedback"),next=document.getElementById("nextBtn");if(answered)showFeedback(q,answered.correct);else{feedback.classList.add("hidden-view");next.classList.add("hidden-view")}
+    }
+    async function answerQuestion(q,choice){const correct=choice===q.correct;app.answers[q.id]={choice,correct};if(correct)app.score++;await persist();renderQuestion()}
+    function showFeedback(q,correct){const feedback=document.getElementById("feedback");feedback.classList.remove("hidden-view");feedback.style.borderColor=correct?"var(--green)":"var(--danger)";const title=document.getElementById("feedbackTitle");title.textContent=correct?"Correct — great work!":"Not quite — keep learning.";title.style.color=correct?"var(--green)":"var(--danger)";document.getElementById("feedbackIcon").setAttribute("data-lucide",correct?"circle-check-big":"circle-x");document.getElementById("explanationText").textContent=correct?q.explanation:`Correct answer: ${q.choices[q.correct]}. ${q.explanation}`;document.getElementById("nextLabel").textContent=app.index===app.order.length-1?"See Results":"Next Question";document.getElementById("nextBtn").classList.remove("hidden-view");lucide.createIcons()}
+    async function nextQuestion(){if(app.index>=app.order.length-1){app.completed=true;app.active=false;await persist();showResults();return}app.index++;await persist();renderQuestion();document.getElementById("questionText").focus()}
+    function showResults(){
+      const total=app.order.length,incorrect=total-app.score,percent=Math.round(app.score/total*100);document.getElementById("percentResult").textContent=`${percent}%`;document.getElementById("scoreResult").textContent=`${app.score} out of ${total} correct`;document.getElementById("correctResult").textContent=app.score;document.getElementById("incorrectResult").textContent=incorrect;document.getElementById("answeredResult").textContent=total;document.getElementById("branchesResult").textContent=app.branches.length;
+      const list=document.getElementById("breakdownList");list.innerHTML="";app.branches.forEach(key=>{const qs=allSelectedQuestions().filter(q=>q.branch===key),hit=qs.filter(q=>app.answers[q.id]?.correct).length,el=document.createElement("div");el.className="panel p-5";el.style.borderColor=BRANCHES[key].color;el.innerHTML=`<div class="flex justify-between gap-2"><strong>${BRANCHES[key].icon} ${BRANCHES[key].name}</strong><strong>${hit}/100</strong></div><div class="progress-track mt-3"><div class="progress-fill" style="width:${hit}%;background:${BRANCHES[key].color}"></div></div>`;list.appendChild(el)});
+      const missed=allSelectedQuestions().filter(q=>!app.answers[q.id]?.correct),missedList=document.getElementById("missedList");missedList.innerHTML="";if(!missed.length)missedList.innerHTML='<p class="panel p-5 font-semibold" style="border-left:4px solid var(--green)">Perfect score! There are no missed questions to review.</p>';missed.forEach(q=>{const item=document.createElement("article");item.className="review-item rounded-xl p-5";item.innerHTML=`<span class="badge" style="color:${q.color};border-color:${q.color}">${q.branchName} · ${q.difficulty}</span><h3 class="mt-3 text-xl font-bold">${q.question}</h3><p class="mt-2"><strong>Correct answer:</strong> ${q.choices[q.correct]}</p><p class="mt-2" style="color:var(--muted)">${q.explanation}</p>`;missedList.appendChild(item)});document.getElementById("reviewSection").classList.add("hidden-view");setView("resultsView");renderBranches();updateHome();lucide.createIcons()
+    }
+    function openConfirm(title,text,action){pendingAction=action;document.getElementById("modalTitle").textContent=title;document.getElementById("modalText").textContent=text;document.getElementById("modal").classList.remove("hidden-view");document.getElementById("modalConfirm").focus()}
+    function closeConfirm(){document.getElementById("modal").classList.add("hidden-view");pendingAction=null}
+    document.getElementById("startBtn").addEventListener("click",()=>app.active?openConfirm("Replace active quiz?","Starting another quiz will discard the unfinished run.",startNew):startNew());
+    document.getElementById("continueBtn").addEventListener("click",()=>{renderQuestion();setView("quizView")});
+    document.getElementById("newFromSavedBtn").addEventListener("click",()=>openConfirm("Start a new quiz?","Your unfinished quiz and its answers will be replaced.",async()=>{app.active=false;await startNew()}));
+    document.getElementById("clearSavedBtn").addEventListener("click",()=>openConfirm("Clear saved progress?","This permanently removes the unfinished quiz from this Canva Sheet.",async()=>{await removeSaved();app={theme:app.theme,active:false,completed:false,branches:[],order:[],index:0,answers:{},score:0,seed:0};renderBranches();updateHome()}));
+    document.getElementById("modalCancel").addEventListener("click",closeConfirm);document.getElementById("modalConfirm").addEventListener("click",async()=>{const fn=pendingAction;closeConfirm();if(fn)await fn()});document.getElementById("nextBtn").addEventListener("click",nextQuestion);document.getElementById("quizHomeBtn").addEventListener("click",()=>{renderBranches();updateHome();setView("homeView")});document.getElementById("resultsHomeBtn").addEventListener("click",()=>{renderBranches();updateHome();setView("homeView")});document.getElementById("brandHome").addEventListener("click",()=>{renderBranches();updateHome();setView("homeView")});document.getElementById("restartBtn").addEventListener("click",()=>openConfirm("Restart this quiz?","This creates a newly shuffled run using the same selected branches.",startNew));document.getElementById("reviewBtn").addEventListener("click",()=>document.getElementById("reviewSection").classList.toggle("hidden-view"));document.getElementById("lightBtn").addEventListener("click",()=>setTheme("light"));document.getElementById("darkBtn").addEventListener("click",()=>setTheme("dark"));
+    document.addEventListener("keydown",e=>{if(!document.getElementById("quizView").classList.contains("hidden-view")){const q=allSelectedQuestions()[app.index];if(q&&!app.answers[q.id]&&["1","2","3","4"].includes(e.key)){e.preventDefault();answerQuestion(q,Number(e.key)-1)}else if(e.key==="Enter"&&!document.getElementById("nextBtn").classList.contains("hidden-view")){e.preventDefault();nextQuestion()}}});
+    const handler={onDataChanged(data){const newest=data[0];if(!newest)return;dbRecord=newest;try{const saved=JSON.parse(newest.saved_state);if(saved&&typeof saved==="object"){const {size,...safeSaved}=saved;app={...app,...safeSaved};applyPrefs();renderBranches();updateHome()}}catch(e){}}};
+    async function init(){renderBranches();applyPrefs();updateHome();lucide.createIcons();const result=await window.dataSdk.init(handler);if(!result.isOk)document.getElementById("selectionMessage").textContent="Saved progress is currently unavailable."}
+    init();
+  </script>
+ 
+</body></html>
